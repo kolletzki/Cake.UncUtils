@@ -1,0 +1,5 @@
+{
+    "source": "\\\\SOMESERVER\\somedir\\",
+    "target": "C:\\Users\\SomeUser\\somedir\\SOMESERVER",
+    "invalidSource": "\\\\some-invalid-server\\somedir"
+}
