@@ -1,6 +1,6 @@
 # Cake.UncUtils
 
-This is a collection of UNC extensions for [Cake](http://cakebuild.net).
+This is a collection of UNC aliases for [Cake](http://cakebuild.net).
 
 ## Usage
 ```csharp
@@ -20,6 +20,7 @@ Task("Demo")
 
 # Todo
 
+- [ ] Use Cake for builds
 - [ ] Create NuGet package
 - [ ] Support file links
 - [ ] Enhance tests
