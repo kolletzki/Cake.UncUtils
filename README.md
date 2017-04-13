@@ -4,7 +4,7 @@ This is a collection of UNC aliases for [Cake](http://cakebuild.net).
 
 ## Usage
 ```csharp
-#r "../path/to/Cake.UncUtils.dll"
+#addin nuget:?package=Cake.UncUtils
 
 var uncSource = @"\\SOMESERVER\somedir";
 var localTarget = @"C:\Users\SomeUser\somedir\SOMESERVER";
@@ -20,7 +20,7 @@ Task("Demo")
 
 # Todo
 
-- [ ] Use Cake for builds
-- [ ] Create NuGet package
+- [x] Use Cake for builds
+- [x] Create NuGet package
 - [ ] Support file links
 - [ ] Enhance tests
