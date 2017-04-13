@@ -74,6 +74,7 @@ Task("Publish-NuGet")
 
 	NuGetPush(package, new NuGetPushSettings
 	{
+		Source = "https://www.nuget.org/api/v2/package",
 		Verbosity = NuGetVerbosity.Detailed
 	});
 });
