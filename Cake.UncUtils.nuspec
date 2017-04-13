@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+	<id>Cake.UncUtils</id>
+	<version>1.0.0</version>
+	<title>Cake.UncUtils</title>
+	<authors>Lukas Kolletzki</authors>
+	<owners>Lukas Kolletzki</owners>
+	<description>A collection of UNC aliases for Cake</description>
+	<summary>A collection of UNC aliases for Cake</summary>
+	<projectUrl>https://github.com/kolletzki/Cake.UncUtils</projectUrl>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<copyright>Copyright (c) Lukas Kolletzki 2017</copyright>
+	<dependencies>
+			<group>
+				<dependency id="Cake.Core" version="0.17.0" />
+			</group>
+	</dependencies>
+  </metadata>
+  <files>
+  	<file src="Cake.UncUtils/bin/Release/Cake.UncUtils.dll" target="lib/net45" />
+  </files>
+</package>
