@@ -51,15 +51,18 @@ namespace Cake.UncUtils
 
 			var localDir = new DirectoryInfo(localTarget);
 
-			if (localDir.Exists) {
+			if (localDir.Exists)
+			{
 				//Check if target dir is empty and throw an exception if not
-				if (localDir.EnumerateFileSystemInfos().Any()) {
+				if (localDir.EnumerateFileSystemInfos().Any()) 
+				{
 					throw new ArgumentException("Local target directory is not empty", nameof(localTarget));
 				}
 				//Delete the actual mount target if empty
 				localDir.Delete();
 			}
-			else {
+			else 
+			{
 				//Create all parent directories of target path
 				localDir.Parent?.Create();
 			}
