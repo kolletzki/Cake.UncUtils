@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Management.Automation.Runspaces;
 using System.Threading;
 using System.Threading.Tasks;
@@ -48,19 +49,23 @@ namespace Cake.UncUtils
 				throw new ArgumentException("UNC path does not exist", nameof(uncSource));
 			}
 
-			//Check if target path does not exists
-			if (Directory.Exists(localTarget))
-			{
-				throw new ArgumentException("Local target directory does already exist", nameof(localTarget));
+			var localDir = new DirectoryInfo(localTarget);
+
+			if (localDir.Exists) {
+				//Check if target dir is empty and throw an exception if not
+				if (localDir.EnumerateFileSystemInfos().Any()) {
+					throw new ArgumentException("Local target directory is not empty", nameof(localTarget));
+				}
+				//Delete the actual mount target if empty
+				localDir.Delete();
+			}
+			else {
+				//Create all parent directories of target path
+				localDir.Parent?.Create();
 			}
 
-			//Create all parent directories of targen path
-			var localParent = localTarget.Substring(0, localTarget.LastIndexOf("\\", StringComparison.Ordinal));
-
-			Directory.CreateDirectory(localParent);
-
 			//Run the mount script
-			RunScript($"Start-Process cmd -Verb RunAs -argument \"/c mklink /d {localTarget} {uncSource}\"");
+			RunScript($"Start-Process cmd -Verb RunAs -argument \"/c mklink /d {localDir.FullName} {uncSource}\"");
 
 			var tResult = new Task<bool>(() =>
 			{

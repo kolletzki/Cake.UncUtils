@@ -31,12 +31,7 @@ namespace Cake.UncUtils.Test
 		{
 			var source = (string) _config.source;
 			var target = (string) _config.target;
-
-			if (Directory.Exists(target))
-			{
-				Directory.Delete(target);
-			}
-
+			
 			_context.CakeContext.MountUncDir(source, target);
 
 			DirectoryAssert.Exists(target);
