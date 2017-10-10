@@ -14,11 +14,11 @@
 	<copyright>Copyright (c) Lukas Kolletzki 2017</copyright>
 	<dependencies>
 			<group>
-				<dependency id="Cake.Core" version="0.17.0" />
+				<dependency id="Cake.Core" version="0.22.0" />
 			</group>
 	</dependencies>
   </metadata>
   <files>
-  	<file src="Cake.UncUtils/bin/Release/Cake.UncUtils.dll" target="lib/net45" />
+  	<file src="Cake.UncUtils/bin/Release/Cake.UncUtils.dll" target="lib/net46" />
   </files>
 </package>
