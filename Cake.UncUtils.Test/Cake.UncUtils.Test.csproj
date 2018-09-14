@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Cake.UncUtils.Test</RootNamespace>
     <AssemblyName>Cake.UncUtils.Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -33,11 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Cake.Core, Version=0.17.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Cake.Core.0.17.0\lib\net45\Cake.Core.dll</HintPath>
+    <Reference Include="Cake.Core, Version=0.22.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Cake.Core.0.22.0\lib\net46\Cake.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Cake.Testing, Version=0.17.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\packages\Cake.Testing.0.17.1\lib\net45\Cake.Testing.dll</HintPath>
+    <Reference Include="Cake.Testing, Version=0.22.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\packages\Cake.Testing.0.22.0\lib\net46\Cake.Testing.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
@@ -66,6 +66,9 @@
       <Project>{FA10631A-DD1F-4218-90DA-42F067D3347D}</Project>
       <Name>Cake.UncUtils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
